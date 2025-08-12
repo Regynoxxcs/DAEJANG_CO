@@ -2,242 +2,150 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Client Login & Registration Form</title>
-    <link rel="icon" type="image/icon" href="img/favicon.svg" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Client Login | Registration| Daejang Co.</title>
 </head>
 
 <body>
-    <div class="container">
-        <!-- Navbar -->
-        <nav>
-            <h1></h1>
-            <div class="link-group">
-                <a id="change_theme"><i class="ri-sun-fill"></i></a>
+    <!--=============== LOGIN IMAGE ===============-->
+    <svg class="login__blob" viewBox="0 0 566 840" xmlns="http://www.w3.org/2000/svg">
+         <mask id="mask0" mask-type="alpha">
+            <path d="M342.407 73.6315C388.53 56.4007 394.378 17.3643 391.538 
+            0H566V840H0C14.5385 834.991 100.266 804.436 77.2046 707.263C49.6393 
+            591.11 115.306 518.927 176.468 488.873C363.385 397.026 156.98 302.824 
+            167.945 179.32C173.46 117.209 284.755 95.1699 342.407 73.6315Z"/>
+         </mask>
+      
+         <g mask="url(#mask0)">
+            <path d="M342.407 73.6315C388.53 56.4007 394.378 17.3643 391.538 
+            0H566V840H0C14.5385 834.991 100.266 804.436 77.2046 707.263C49.6393 
+            591.11 115.306 518.927 176.468 488.873C363.385 397.026 156.98 302.824 
+            167.945 179.32C173.46 117.209 284.755 95.1699 342.407 73.6315Z"/>
+      
+            <!-- Insert your image (recommended size: 1000 x 1200) -->
+            <image class="login__img" href="assets/img/bg-img.jpg"/>
+         </g>
+      </svg>
 
-            </div>
-        </nav>
+    <!--=============== LOGIN ===============-->
+    <div class="login container grid" id="loginAccessRegister">
+        <!--===== LOGIN ACCESS =====-->
+        <div class="login__access">
+            <h1 class="login__title">Log in to your account.</h1>
 
-        <!-- Login Form -->
-        <section class="login-form">
-            <div class="card">
-                <h1>Login</h1>
-                <div class="input-group">
-                    <div class="username-email-input">
-                        <div class="input-box">
-                            <input type="text" id="username_email" class="input" placeholder=" " />
-                            <label for="username_email" class="input-label">Username or Email</label
-                >
-              </div>
-              <span>
-                <p class="mark">!</p>
-                <p class="error-text" id="username_email_error"></p>
-              </span>
-            </div>
-            <div class="password-input">
-              <div class="input-box">
-                <input
-                  type="password"
-                  id="password"
-                  class="input"
-                  placeholder=" "
-                />
-                <label for="password" class="input-label">Password</label>
+            <div class="login__area">
+                <form action="" class="login__form">
+                    <div class="login__content grid">
+                        <div class="login__box">
+                            <input type="email" id="email" required placeholder=" " class="login__input">
+                            <label for="email" class="login__label">Email</label>
+
+                            <i class="ri-mail-fill login__icon"></i>
                         </div>
-                        <span>
-                <p class="mark">!</p>
-                <p class="error-text" id="password_error"></p>
-              </span>
+
+                        <div class="login__box">
+                            <input type="password" id="password" required placeholder=" " class="login__input">
+                            <label for="password" class="login__label">Password</label>
+
+                            <i class="ri-eye-off-fill login__icon login__password" id="loginPassword"></i>
+                        </div>
+                    </div>
+
+                    <a href="#" class="login__forgot">Forgot your password?</a>
+
+                    <button type="submit" class="login__button">Login</button>
+                </form>
+
+                <div class="login__social">
+                    <p class="login__social-title">Or login with</p>
+
+                    <div class="login__social-links">
+                        <a href="#" class="login__social-link">
+                            <img src="assets/img/icon-google.svg" alt="image" class="login__social-img">
+                        </a>
+
+                        <a href="#" class="login__social-link">
+                            <img src="assets/img/icon-facebook.svg" alt="image" class="login__social-img">
+                        </a>
+
+                        <a href="#" class="login__social-link">
+                            <img src="assets/img/icon-apple.svg" alt="image" class="login__social-img">
+                        </a>
                     </div>
                 </div>
-                <div class="check-element">
-                    <input type="checkbox" name="remember-check" id="remember_check" />
-                    <label for="remember_check">Remember me</label>
-                </div>
-                <button type="submit" id="login_submit" class="btn">LOGIN</button>
-            </div>
-            <div class="under-card">
-                <p>Don't have an account?</p>
-                <button id="to_signup">Create</button>
-            </div>
-        </section>
 
-        <!-- Register Form -->
-        <section class="signup-form">
-            <div class="card">
-                <h1>Sign Up</h1>
-                <div class="input-group">
-                    <div class="username-input">
-                        <div class="input-box">
-                            <input type="text" id="username" class="input" placeholder=" " maxlength="25" />
-                            <label for="username" class="input-label">Username</label>
+                <p class="login__switch">
+                    Don't have an account?
+                    <button id="loginButtonRegister">Create Account</button>
+                </p>
+            </div>
+        </div>
+
+        <!--===== LOGIN REGISTER =====-->
+        <div class="login__register">
+            <h1 class="login__title">Create new account.</h1>
+
+            <div class="login__area">
+                <form action="" class="login__form">
+                    <div class="login__content grid">
+                        <div class="login__group grid">
+                            <div class="login__box">
+                                <input type="text" id="names" required placeholder=" " class="login__input">
+                                <label for="names" class="login__label">First Name</label>
+
+                                <i class="ri-id-card-fill login__icon"></i>
+                            </div>
+
+                            <div class="login__box">
+                                <input type="text" id="surnames" required placeholder=" " class="login__input">
+                                <label for="surnames" class="login__label">Surname</label>
+
+                                <i class="ri-id-card-fill login__icon"></i>
+                            </div>
                         </div>
-                        <span>
-                <p class="mark">!</p>
-                <p class="error-text" id="username_error"></p>
-              </span>
-                    </div>
-                    <div class="email-input">
-                        <div class="input-box">
-                            <input type="text" id="email" class="input" placeholder=" " />
-                            <label for="email" class="input-label">Email</label>
+
+                        <div class="login__box">
+                            <input type="email" id="emailCreate" required placeholder=" " class="login__input">
+                            <label for="emailCreate" class="login__label">Email</label>
+
+                            <i class="ri-mail-fill login__icon"></i>
                         </div>
-                        <span>
-                <p class="mark">!</p>
-                <p class="error-text" id="email_error"></p>
-              </span>
-                    </div>
-                    <div class="password-input">
-                        <div class="input-box">
-                            <input type="password" id="reg_password" class="input" placeholder=" " />
-                            <label for="reg_password" class="input-label">Password</label>
+
+                        <div class="login__box">
+                            <input type="password" id="passwordCreate" required placeholder=" " class="login__input">
+                            <label for="passwordCreate" class="login__label">Password</label>
+
+                            <i class="ri-eye-off-fill login__icon login__password" id="loginPasswordCreate"></i>
                         </div>
-                        <span>
-                <p class="mark">!</p>
-                <p class="error-text" id="reg_password_error"></p>
-              </span>
+                        <div class="login__box">
+                            <input type="password" id="passwordCreate" required placeholder=" " class="login__input">
+                            <label for="passwordCreate" class="login__label">Confirm Password</label>
+
+                            <i class="ri-eye-off-fill login__icon login__password" id="loginPasswordCreate"></i>
+                        </div>
                     </div>
-                    <div class="password-input">
-                        <div class="input-box">
-                            <input type="password" id="conreg_password" class="input" placeholder=" " />
-                            <label for="conreg_password" class="input-label">Confirm Password</label
-                >
-              </div>
-              <span>
-                <p class="mark">!</p>
-                <p class="error-text" id="conreg_password_error"></p>
-              </span>
-            </div>
-          </div>
-          <div class="check-element">
-            <input type="checkbox" name="reg-check" id="reg_check" />
-            <label for="reg_check"
-              >This account can only be used on this device.</label
-            >
-          </div>
-          <button type="submit" id="signup_submit" class="btn" disabled>
-            SIGN UP
-          </button>
-        </div>
-        <div class="under-card">
-          <p>Already have an account?</p>
-          <button id="to_login">Login</button>
-        </div>
-      </section>
 
-      <!-- Welcome -->
-      <section class="welcome-form">
-        <div class="card" id="welcome_card">
-          <h1>Welcome, <span id="name_output">name</span></h1>
-          <div class="btn-group">
-            <button id="change_password_btn" class="cancel-btn btn">
-              Change Password
-            </button>
-            <button id="delete_account_btn" class="cancel-btn btn">
-              Delete Account
-            </button>
-            <button id="logout_btn" class="btn">LOGOUT</button>
-          </div>
-        </div>
-      </section>
+                    <button type="submit" class="login__button">Create account</button>
+                </form>
 
-      <!-- Change Password Form -->
-      <section class="change-password-form">
-        <div class="card" id="change_password_card">
-          <h1>Change Password</h1>
-          <div class="input-group">
-            <div class="password-input">
-              <div class="input-box">
-                <input
-                  type="password"
-                  id="current_password"
-                  class="input"
-                  placeholder=" "
-                />
-                <label for="current_password" class="input-label"
-                  >Current Password</label
-                >
-              </div>
-              <span>
-                <p class="mark">!</p>
-                <p class="error-text" id="current_password_error"></p>
-              </span>
+                <p class="login__switch">
+                    Already have an account?
+                    <button id="loginButtonAccess">Log In</button>
+                </p>
             </div>
-            <div class="password-input">
-              <div class="input-box">
-                <input
-                  type="password"
-                  id="change_password"
-                  class="input"
-                  placeholder=" "
-                />
-                <label for="change_password" class="input-label"
-                  >New Password</label
-                >
-              </div>
-              <span>
-                <p class="mark">!</p>
-                <p class="error-text" id="change_password_error"></p>
-              </span>
-            </div>
-            <div class="password-input">
-              <div class="input-box">
-                <input
-                  type="password"
-                  id="conchange_password"
-                  class="input"
-                  placeholder=" "
-                />
-                <label for="conchange_password" class="input-label"
-                  >Confirm New Password</label
-                >
-              </div>
-              <span>
-                <p class="mark">!</p>
-                <p class="error-text" id="conchange_password_error"></p>
-              </span>
-            </div>
-          </div>
-          <div class="btn-group">
-            <button type="submit" id="change_submit" class="btn">SUBMIT</button>
-            <button type="submit" id="change_cancel" class="cancel-btn btn">
-              CANCEL
-            </button>
-          </div>
         </div>
-      </section>
-
-      <!-- Delete Account Form -->
-      <section class="delete-account-form">
-        <div class="card" id="delete_account_card">
-          <h1>Delete Account</h1>
-          <div class="btn-group">
-            <button type="submit" id="delete_confirm" class="btn">
-              CONFIRM
-            </button>
-            <button type="submit" id="delete_cancel" class="cancel-btn btn">
-              CANCEL
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Success Form -->
-      <section class="success-form">
-        <div class="card" id="success_card">
-          <h1 id="success_text">Success text</h1>
-          <button type="submit" id="success_continue" class="btn">
-            CONTINUE
-          </button>
-        </div>
-      </section>
     </div>
 
-    <!-- Script -->
-    <script src="script.js"></script>
-  </body>
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>
