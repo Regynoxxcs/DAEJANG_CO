@@ -14,6 +14,7 @@
 
 <body>
 <?php include 'assets/header.php'; ?>
-</body>
 
+</body>
+<?php include 'assets/footer.php'; ?>
 </html>

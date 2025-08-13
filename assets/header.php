@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Site Title</title>
+    <title>Daejang Co.</title>
     <style>
         /* Basic Reset */
         * {
@@ -27,6 +27,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 30px;
+            
         }
 
         .logo {
@@ -41,12 +42,15 @@
 
         nav ul li {
             margin-left: 20px;
+            z-index: 1;
+           
         }
 
         nav ul li a {
             text-decoration: none;
             color: white;
             transition: color 0.3s;
+            
         }
 
         nav ul li a:hover {
@@ -110,10 +114,13 @@
     </div>
     <nav>
         <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="about.php">About</a></li>
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="about.php">About Us</a></li>
             <li><a href="services.php">Services</a></li>
             <li><a href="contact.php">Contact</a></li>
+            <li><a href="./clients/login.php">Clients</a></li>
+            <li><a href="contact.php">Vendors</a></li>
+            <li><a href="contact.php">Support</a></li>
         </ul>
     </nav>
 </header>

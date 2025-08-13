@@ -15,6 +15,7 @@
 </head>
 
 <body>
+   <?php include '../assets/header.php'; ?>
     <!--=============== LOGIN IMAGE ===============-->
     <svg class="login__blob" viewBox="0 0 566 840" xmlns="http://www.w3.org/2000/svg">
          <mask id="mask0" mask-type="alpha">
